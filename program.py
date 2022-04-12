@@ -2,33 +2,54 @@ import urllib.request
 import requests
 import pandas as pd
 import json
-import requests
-from bs4 import BeautifulSoup
+import logging
+import logging.config
+import yaml
+import os
 
-def get_data(r):
-    # Parsing the HTML
-    soup = BeautifulSoup(r.content, 'html.parser')
+from azure.common.credentials import ServicePrincipalCredentials
+from azure.identity import ClientSecretCredential
+from azure.identity import DefaultAzureCredential
+from azure.mgmt.resource import ResourceManagementClient
+from azure.mgmt.storage import StorageManagementClient
+from azure.mgmt.storage.models import (
+    StorageAccountCreateParameters,
+    NetworkRuleSet,
+    IPRule,
+    StorageAccountUpdateParameters,
+    Sku,
+    SkuName,
+    Kind
+)
+from utils.helper import get_data
+from lib import blob_storage
 
-    for link in soup.find_all('a'):
-        if "ServiceTags_Public" in link.get('href'):
-            data = json.loads(requests.get(link.get('href')).text)
+with open('./logging.yaml') as stream:
+    config = yaml.load(stream, Loader=yaml.FullLoader)
 
-    return data
+logging.config.dictConfig(config)
+logger = logging.getLogger('simpleExample')
 
 
 def main():
 
-    confirmation_url = "https://www.microsoft.com/en-us/download/confirmation.aspx?id=56519"
-    
-    # Making a GET request
-    r = requests.get(confirmation_url)
-    
-    data = get_data(r)
+    data = get_data()
     df_tags = pd.json_normalize(data, record_path=['values'], meta=['changeNumber','cloud'],errors='ignore')
 
     # set an empty dataframe to be concatenated with all 
     # the data being retrieved
     df = pd.DataFrame()
+
+    bs = blob_storage(
+        client_id = 'a888b9fe-38ff-4551-844f-7416e1cbb89f',
+        secret=os.getenv("ECOLAB_ADF_SP_SECRET"),
+        tenant=os.getenv("TENANT_ID"),
+        subscription_id = os.getenv("SUBSCRIPTION_ID"),
+        account_name = "ecolabgen2",
+        resource_group = "ecolab-rg"
+    )
+
+    exit
 
     # probably want to call key vault to get this value
     API_KEY="D54MEY6ZMD"
