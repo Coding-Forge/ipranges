@@ -22,7 +22,8 @@ from azure.mgmt.storage.models import (
     Kind
 )
 from utils.helper import get_data
-from lib import blob_storage
+from lib.blob_storage import Firewall
+
 
 with open('./logging.yaml') as stream:
     config = yaml.load(stream, Loader=yaml.FullLoader)
@@ -40,14 +41,17 @@ def main():
     # the data being retrieved
     df = pd.DataFrame()
 
-    bs = blob_storage(
+    bs_firewall = Firewall(
         client_id = 'a888b9fe-38ff-4551-844f-7416e1cbb89f',
         secret=os.getenv("ECOLAB_ADF_SP_SECRET"),
-        tenant=os.getenv("TENANT_ID"),
+        tenant_id=os.getenv("TENANT_ID"),
         subscription_id = os.getenv("SUBSCRIPTION_ID"),
         account_name = "ecolabgen2",
         resource_group = "ecolab-rg"
     )
+    
+    #creds = bs_firewall.get_credentials()
+    #print(creds)
 
     exit
 
