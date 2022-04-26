@@ -2,9 +2,13 @@ import requests
 from bs4 import BeautifulSoup
 import json
 import logging
+import pandas as pd
 
 
-def get_data():
+def get_data(azure_service):
+    '''
+    this function goes out to the download page for Azure Tags and Services and retrieves the latest publication of IP Ranges per service
+    '''
 
     #create a logger
     logger = logging.getLogger('urlLogger')
@@ -23,4 +27,8 @@ def get_data():
             data = json.loads(requests.get(link.get('href')).text)
             break
 
-    return data
+    df_tags = pd.json_normalize(data, record_path=['values'], meta=['changeNumber','cloud'],errors='ignore')
+
+    ipranges=list(df_tags[df_tags['properties.systemService']==azure_service]['properties.addressPrefixes'])[0]
+    logger.info(f'This is the first ip from the ranges {ipranges[0]}')
+    return ipranges

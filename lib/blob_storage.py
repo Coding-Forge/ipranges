@@ -1,3 +1,5 @@
+import logging
+from readline import get_completion_type
 from turtle import screensize
 import pandas as pd
 from lib.authentication import Authenticate
@@ -28,16 +30,20 @@ class Firewall(Authenticate):
     def get_storage_account(self):
         self.storage_account = self.storage_client.storage_accounts.get_properties(self.resource_group,self.account_name)
 
-    def update_rules(self, ip_ranges, df, region):
+    def update_rules(self, ip_ranges, df, region, credentials):
 
         ip = df[df['region_name']==region]['CIDR']
 
         str_ip_rules = ""
         ip_ranges = []
+        logging.info(f"This is credentials {credentials}")
+        self.get_client(credentials=credentials)
 
         # /31 and /32 are not allowed to be entered as IP Ranges using CIDR
         # must be entered as an IP
+        logging.info(f"This is the ip {ip}")
         for address in ip:
+            logging.info("got here inside the loop")
             if ":" not in address:
                 if "31" in address:
                     val = address.replace("/31","")
@@ -53,7 +59,9 @@ class Firewall(Authenticate):
 
 
         str_ip_rules=str_ip_rules[0:-1]
-        ip_rules = list(str_ip_rules.split("|"))                    
+        ip_rules = list(str_ip_rules.split("|"))   
+
+        print(f"This is output {str_ip_rules}")                 
 
         storage_account = self.storage_client.storage_accounts.update(
             self.resource_group, self.account_name,

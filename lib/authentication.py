@@ -21,7 +21,7 @@ class Authenticate():
         self.secret = secret
         self.client_id = client_id
 
-    def get_credentials(self, spc=True):
+    def get_credentials(self, spc=False):
         '''
         This function can provide credentials for a Service Principal or Client
         It is defaulted to return credentials for a Service Principal
