@@ -478,3 +478,55 @@ Response headers:
     'x-ms-routing-request-id': 'REDACTED'
     'X-Content-Type-Options': 'REDACTED'
     'Date': 'Tue, 26 Apr 2022 13:47:38 GMT'
+2022-04-26 13:55:42,051 - urlLogger - INFO - this is the link it found: https://download.microsoft.com/download/7/1/D/71D86715-5596-4529-9B13-DA13A5DE5B63/ServiceTags_Public_20220425.json
+2022-04-26 13:55:42,051 - urlLogger - INFO - this is the link it found: https://download.microsoft.com/download/7/1/D/71D86715-5596-4529-9B13-DA13A5DE5B63/ServiceTags_Public_20220425.json
+2022-04-26 13:55:43,120 - urlLogger - INFO - This is the first ip from the ranges 13.73.248.4/31
+2022-04-26 13:55:43,120 - urlLogger - INFO - This is the first ip from the ranges 13.73.248.4/31
+2022-04-26 13:57:32,410 - urlLogger - INFO - this is the link it found: https://download.microsoft.com/download/7/1/D/71D86715-5596-4529-9B13-DA13A5DE5B63/ServiceTags_Public_20220425.json
+2022-04-26 13:57:32,410 - urlLogger - INFO - this is the link it found: https://download.microsoft.com/download/7/1/D/71D86715-5596-4529-9B13-DA13A5DE5B63/ServiceTags_Public_20220425.json
+2022-04-26 13:57:37,387 - urlLogger - INFO - This is the first ip from the ranges 13.73.248.4/31
+2022-04-26 13:57:37,387 - urlLogger - INFO - This is the first ip from the ranges 13.73.248.4/31
+2022-04-26 14:02:03,626 - urlLogger - INFO - this is the link it found: https://download.microsoft.com/download/7/1/D/71D86715-5596-4529-9B13-DA13A5DE5B63/ServiceTags_Public_20220425.json
+2022-04-26 14:02:03,626 - urlLogger - INFO - this is the link it found: https://download.microsoft.com/download/7/1/D/71D86715-5596-4529-9B13-DA13A5DE5B63/ServiceTags_Public_20220425.json
+2022-04-26 14:02:04,398 - urlLogger - INFO - This is the first ip from the ranges 13.73.248.4/31
+2022-04-26 14:02:04,398 - urlLogger - INFO - This is the first ip from the ranges 13.73.248.4/31
+2022-04-26 14:49:40,144 - urlLogger - INFO - this is the link it found: https://download.microsoft.com/download/7/1/D/71D86715-5596-4529-9B13-DA13A5DE5B63/ServiceTags_Public_20220425.json
+2022-04-26 14:49:40,144 - urlLogger - INFO - this is the link it found: https://download.microsoft.com/download/7/1/D/71D86715-5596-4529-9B13-DA13A5DE5B63/ServiceTags_Public_20220425.json
+2022-04-26 14:49:41,308 - urlLogger - INFO - This is the first ip from the ranges 13.73.248.4/31
+2022-04-26 14:49:41,308 - urlLogger - INFO - This is the first ip from the ranges 13.73.248.4/31
+2022-04-26 14:53:27,416 - urlLogger - INFO - this is the link it found: https://download.microsoft.com/download/7/1/D/71D86715-5596-4529-9B13-DA13A5DE5B63/ServiceTags_Public_20220425.json
+2022-04-26 14:53:27,416 - urlLogger - INFO - this is the link it found: https://download.microsoft.com/download/7/1/D/71D86715-5596-4529-9B13-DA13A5DE5B63/ServiceTags_Public_20220425.json
+2022-04-26 14:53:28,072 - urlLogger - INFO - This is the first ip from the ranges 13.73.248.4/31
+2022-04-26 14:53:28,072 - urlLogger - INFO - This is the first ip from the ranges 13.73.248.4/31
+2022-04-26 14:58:31,804 - urlLogger - INFO - this is the link it found: https://download.microsoft.com/download/7/1/D/71D86715-5596-4529-9B13-DA13A5DE5B63/ServiceTags_Public_20220425.json
+2022-04-26 14:58:31,804 - urlLogger - INFO - this is the link it found: https://download.microsoft.com/download/7/1/D/71D86715-5596-4529-9B13-DA13A5DE5B63/ServiceTags_Public_20220425.json
+2022-04-26 14:58:32,634 - urlLogger - INFO - This is the first ip from the ranges 13.73.248.4/31
+2022-04-26 14:58:32,634 - urlLogger - INFO - This is the first ip from the ranges 13.73.248.4/31
+2022-04-26 15:00:19,572 - urlLogger - INFO - this is the link it found: https://download.microsoft.com/download/7/1/D/71D86715-5596-4529-9B13-DA13A5DE5B63/ServiceTags_Public_20220425.json
+2022-04-26 15:00:19,572 - urlLogger - INFO - this is the link it found: https://download.microsoft.com/download/7/1/D/71D86715-5596-4529-9B13-DA13A5DE5B63/ServiceTags_Public_20220425.json
+2022-04-26 15:00:20,329 - urlLogger - INFO - This is the first ip from the ranges 13.73.248.4/31
+2022-04-26 15:00:20,329 - urlLogger - INFO - This is the first ip from the ranges 13.73.248.4/31
+2022-04-26 15:04:19,289 - urlLogger - INFO - this is the link it found: https://download.microsoft.com/download/7/1/D/71D86715-5596-4529-9B13-DA13A5DE5B63/ServiceTags_Public_20220425.json
+2022-04-26 15:04:19,289 - urlLogger - INFO - this is the link it found: https://download.microsoft.com/download/7/1/D/71D86715-5596-4529-9B13-DA13A5DE5B63/ServiceTags_Public_20220425.json
+2022-04-26 15:04:19,924 - urlLogger - INFO - This is the first ip from the ranges 13.73.248.4/31
+2022-04-26 15:04:19,924 - urlLogger - INFO - This is the first ip from the ranges 13.73.248.4/31
+2022-04-26 15:07:38,340 - urlLogger - INFO - this is the link it found: https://download.microsoft.com/download/7/1/D/71D86715-5596-4529-9B13-DA13A5DE5B63/ServiceTags_Public_20220425.json
+2022-04-26 15:07:38,340 - urlLogger - INFO - this is the link it found: https://download.microsoft.com/download/7/1/D/71D86715-5596-4529-9B13-DA13A5DE5B63/ServiceTags_Public_20220425.json
+2022-04-26 15:07:38,964 - urlLogger - INFO - This is the first ip from the ranges 13.73.248.4/31
+2022-04-26 15:07:38,964 - urlLogger - INFO - This is the first ip from the ranges 13.73.248.4/31
+2022-04-26 15:50:58,221 - urlLogger - INFO - this is the link it found: https://download.microsoft.com/download/7/1/D/71D86715-5596-4529-9B13-DA13A5DE5B63/ServiceTags_Public_20220425.json
+2022-04-26 15:50:58,221 - urlLogger - INFO - this is the link it found: https://download.microsoft.com/download/7/1/D/71D86715-5596-4529-9B13-DA13A5DE5B63/ServiceTags_Public_20220425.json
+2022-04-26 15:50:58,883 - urlLogger - INFO - This is the first ip from the ranges 13.73.248.4/31
+2022-04-26 15:50:58,883 - urlLogger - INFO - This is the first ip from the ranges 13.73.248.4/31
+2022-04-26 16:00:15,382 - urlLogger - INFO - this is the link it found: https://download.microsoft.com/download/7/1/D/71D86715-5596-4529-9B13-DA13A5DE5B63/ServiceTags_Public_20220425.json
+2022-04-26 16:00:15,382 - urlLogger - INFO - this is the link it found: https://download.microsoft.com/download/7/1/D/71D86715-5596-4529-9B13-DA13A5DE5B63/ServiceTags_Public_20220425.json
+2022-04-26 16:00:20,221 - urlLogger - INFO - This is the first ip from the ranges 13.73.248.4/31
+2022-04-26 16:00:20,221 - urlLogger - INFO - This is the first ip from the ranges 13.73.248.4/31
+2022-04-26 17:43:05,038 - urlLogger - INFO - this is the link it found: https://download.microsoft.com/download/7/1/D/71D86715-5596-4529-9B13-DA13A5DE5B63/ServiceTags_Public_20220425.json
+2022-04-26 17:43:05,038 - urlLogger - INFO - this is the link it found: https://download.microsoft.com/download/7/1/D/71D86715-5596-4529-9B13-DA13A5DE5B63/ServiceTags_Public_20220425.json
+2022-04-26 17:43:05,676 - urlLogger - INFO - This is the first ip from the ranges 13.73.248.4/31
+2022-04-26 17:43:05,676 - urlLogger - INFO - This is the first ip from the ranges 13.73.248.4/31
+2022-04-26 17:43:40,191 - urlLogger - INFO - this is the link it found: https://download.microsoft.com/download/7/1/D/71D86715-5596-4529-9B13-DA13A5DE5B63/ServiceTags_Public_20220425.json
+2022-04-26 17:43:40,191 - urlLogger - INFO - this is the link it found: https://download.microsoft.com/download/7/1/D/71D86715-5596-4529-9B13-DA13A5DE5B63/ServiceTags_Public_20220425.json
+2022-04-26 17:43:40,844 - urlLogger - INFO - This is the first ip from the ranges 13.73.248.4/31
+2022-04-26 17:43:40,844 - urlLogger - INFO - This is the first ip from the ranges 13.73.248.4/31

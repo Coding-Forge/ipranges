@@ -32,16 +32,21 @@ with open('./logging.yaml') as stream:
 
 logging.config.dictConfig(config)
 logger = logging.getLogger('simpleExample')
-
+import argparse
 
 def main():
-
-    azure_service="PowerBI"
+    parser = argparse.ArgumentParser(description="A python script that retrieves IP Addresses and updates Azure Service Firewalls")
+    parser.add_argument("--azure_service", help="Pick which azure service you would like to know the ip ranges for")
+    args = parser.parse_args()
+    azure_service=args.azure_service
 
     # get the JSON document with Azure Services and their associated IPs
     ipranges = get_data(azure_service=azure_service)
-    print(ipranges[0])
+    logger.info(f"The following are the ip ranges for {azure_service} {ipranges}")
+
+
     # Authenticate against Azure
+    logger.info("Authenticating")
     bs_firewall = Firewall(
         client_id = 'a888b9fe-38ff-4551-844f-7416e1cbb89f',
         secret=os.getenv("ECOLAB_ADF_SP_SECRET"),
@@ -63,9 +68,14 @@ def main():
 
     logger.info("doing the reverse lookup using IP addresses")
     fml = find_my_location(package=PACKAGE, api_key=API_KEY)
+
+    logger.info("getting the ipranges and the pandas dataframe")
     data, ipranges = fml.get_azure_ip(ipranges=ipranges)
 
-    bs_firewall.update_rules(ip_ranges=ipranges,df=data,region="Iowa", credentials=credentials)
+    if data.shape[0]!=0:
+        bs_firewall.update_rules(ip_ranges=ipranges,df=data,region="Iowa", credentials=credentials)
+    else:
+        raise Exception("dataframe is empty")
 
 
 if __name__ == "__main__":
