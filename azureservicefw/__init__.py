@@ -55,11 +55,11 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     logging.info("Authenticating")
     bs_firewall = Firewall(
         client_id = 'a888b9fe-38ff-4551-844f-7416e1cbb89f',
-        secret=os.getenv("ECOLAB_ADF_SP_SECRET"),
+        secret=os.getenv("site_ADF_SP_SECRET"),
         tenant_id=os.getenv("TENANT_ID"),
         subscription_id = os.getenv("SUBSCRIPTION_ID"),
-        account_name = "ecolabgen2",
-        resource_group = "ecolab-rg"
+        account_name = "sitegen2",
+        resource_group = "site-rg"
     )
     
     # get the credentials that will be used in conjunction with the service client
