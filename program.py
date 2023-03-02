@@ -48,7 +48,7 @@ def main():
     # Authenticate against Azure
     logger.info("Authenticating")
     bs_firewall = Firewall(
-        client_id = 'a888b9fe-38ff-4551-844f-7416e1cbb89f',
+        client_id = os.getenv("client_id"),
         secret=os.getenv("site_ADF_SP_SECRET"),
         tenant_id=os.getenv("TENANT_ID"),
         subscription_id = os.getenv("SUBSCRIPTION_ID"),
@@ -61,7 +61,7 @@ def main():
     credentials = bs_firewall.get_credentials()
 
     # probably want to call key vault to get this value
-    API_KEY="D54MEY6ZMD"
+    API_KEY=os.getenv("api_key")
 
     # defines what will be returned from the REST API
     PACKAGE="WS5"
