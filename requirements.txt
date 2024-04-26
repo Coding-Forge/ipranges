@@ -93,7 +93,7 @@ cffi==1.15.0
 charset-normalizer==2.0.12
 cryptography==36.0.2
 et-xmlfile==1.1.0
-idna==3.3
+idna==3.7
 isodate==0.6.1
 msal==1.17.0
 msal-extensions==0.3.1
